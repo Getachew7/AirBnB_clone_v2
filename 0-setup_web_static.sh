@@ -12,7 +12,7 @@ sudo ufw allow 'Nginx HTTP'
 sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
 
 #--adds test string
-echo "<h1>Testing server config...</h1>" > /data/web_static/releases/test/index.html
+echo "<h1>Testing server config...</h1>" | sudo tee /data/web_static/releases/test/index.html
 
 #--create symbolic link
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
